@@ -11,8 +11,7 @@ type: Index
 position: Consumer
 access: 3rd-Party
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-tags:
-  - API
+tags: []
 created: '2025-02-24'
 modified: '2026-03-16'
 url: >-
@@ -29,8 +28,7 @@ apis:
       into their applications, services, and platforms, including buying and selling
       popular stablecoins like QCAD and USDC with CAD and USD.
     humanURL: ' https://docs.grapesfinance.com/api-user-guide/'
-    tags:
-      - API
+    tags: []
     properties:
       - type: Documentation
         url: ' https://docs.grapesfinance.com/api-user-guide/'
