@@ -1,0 +1,44 @@
+aid: grapes-finance
+name: Grapes Finance Rules
+description: >-
+  Operational rules and conventions for the Grapes Finance embedded stablecoin
+  onramp and offramp APIs, covering authentication, KYC/KYB requirements,
+  asset handling, and integration constraints.
+rules:
+  - id: authentication
+    name: API Key Authentication Required
+    description: >-
+      All API requests require valid client credentials. Unauthenticated
+      requests fail. Demo and production environments use separate keys.
+  - id: kyc-kyb
+    name: KYC and KYB Verification
+    description: >-
+      End users and organizations must complete KYC (individuals) or KYB
+      (businesses) verification before transacting. Verification can be
+      conducted directly or via Grapes-integrated providers.
+  - id: supported-assets
+    name: Supported Assets
+    description: >-
+      Supported stablecoins are USDC and QCAD. Supported fiat currencies are
+      CAD and USD. Onramps from Canadian banks are supported through the Core
+      API.
+  - id: supported-chains
+    name: Supported Blockchains
+    description: >-
+      Wallets can be created on Ethereum, Algorand, or Stellar. Both custodial
+      and non-custodial wallets are supported.
+  - id: amount-precision
+    name: Amount Precision
+    description: >-
+      Decimal amounts must be transmitted as strings to preserve precision.
+      Avoid floating-point representations to prevent rounding errors.
+  - id: organizations-api
+    name: Organizations (Vineyard Manager) API
+    description: >-
+      The Organizations API enables embedded use cases where the business
+      manages client wallets and submits transactions on their behalf, without
+      requiring direct end-client authentication.
+maintainer:
+  name: Kin Lane
+  email: kin@apievangelist.com
+modified: '2026-04-28'

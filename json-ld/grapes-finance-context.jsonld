@@ -1,0 +1,33 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "grapes": "https://raw.githubusercontent.com/api-evangelist/grapes-finance/refs/heads/main/json-ld/grapes-finance-context.jsonld#",
+    "Order": "grapes:Order",
+    "Wallet": "grapes:Wallet",
+    "User": "grapes:User",
+    "Organization": "schema:Organization",
+    "id": "@id",
+    "type": "grapes:orderType",
+    "sourceAsset": "grapes:sourceAsset",
+    "destinationAsset": "grapes:destinationAsset",
+    "amount": {
+      "@id": "grapes:amount",
+      "@type": "xsd:decimal"
+    },
+    "status": "grapes:status",
+    "chain": {
+      "@id": "grapes:chain",
+      "@type": "@vocab"
+    },
+    "address": "grapes:walletAddress",
+    "createdAt": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "settledAt": {
+      "@id": "grapes:settledAt",
+      "@type": "xsd:dateTime"
+    },
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }
+}

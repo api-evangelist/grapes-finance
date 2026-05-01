@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/grapes-finance/refs/heads/main/json-schema/grapes-finance-order-schema.json",
+  "title": "Grapes Finance Order",
+  "description": "A fiat-to-stablecoin, stablecoin-to-fiat, payout, or swap order processed by the Grapes Finance API.",
+  "type": "object",
+  "required": ["id", "type", "sourceAsset", "destinationAsset", "amount", "status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique order identifier."
+    },
+    "type": {
+      "type": "string",
+      "enum": ["onramp", "offramp", "payout", "swap"],
+      "description": "Type of order being executed."
+    },
+    "sourceAsset": {
+      "type": "string",
+      "enum": ["USDC", "QCAD", "CAD", "USD"],
+      "description": "Source asset being converted from."
+    },
+    "destinationAsset": {
+      "type": "string",
+      "enum": ["USDC", "QCAD", "CAD", "USD"],
+      "description": "Destination asset being converted to."
+    },
+    "amount": {
+      "type": "string",
+      "description": "Decimal amount represented as a string to preserve precision."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "processing", "settled", "failed"],
+      "description": "Current order processing state."
+    },
+    "userId": {
+      "type": "string",
+      "description": "Identifier of the user submitting the order."
+    },
+    "walletId": {
+      "type": "string",
+      "description": "Wallet involved in the order, if applicable."
+    },
+    "contactId": {
+      "type": "string",
+      "description": "Beneficiary contact identifier for payouts."
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "settledAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
