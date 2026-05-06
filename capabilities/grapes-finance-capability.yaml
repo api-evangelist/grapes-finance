@@ -1,0 +1,411 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Grapes Finance API
+  description: Grapes is an embedded stablecoin onramp and offramp solution that enables businesses and developers to integrate
+    fiat-to-stablecoin and stablecoin-to-fiat transactions. Supports buying and selling stablecoins such as USDC and QCAD
+    with CAD and USD across Ethereum, Algorand, and Stellar networks.
+  tags:
+  - Grapes
+  - Finance
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: grapes-finance
+    baseUri: https://api.demo.grapesfinance.com
+    description: Grapes Finance API HTTP API.
+    authentication:
+      type: apikey
+      in: header
+      name: X-API-Key
+      value: '{{GRAPES_FINANCE_TOKEN}}'
+    resources:
+    - name: users
+      path: /users
+      operations:
+      - name: get-users
+        method: GET
+        description: List users
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post-users
+        method: POST
+        description: Create user
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: users-userid
+      path: /users/{userId}
+      operations:
+      - name: get-users-userid
+        method: GET
+        description: Get user
+        inputParameters:
+        - name: userId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: kyc
+      path: /kyc
+      operations:
+      - name: post-kyc
+        method: POST
+        description: Submit KYC application
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: wallets
+      path: /wallets
+      operations:
+      - name: get-wallets
+        method: GET
+        description: List wallets
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post-wallets
+        method: POST
+        description: Create wallet
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: orders
+      path: /orders
+      operations:
+      - name: get-orders
+        method: GET
+        description: List orders
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post-orders
+        method: POST
+        description: Create order
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: contacts
+      path: /contacts
+      operations:
+      - name: get-contacts
+        method: GET
+        description: List contacts
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post-contacts
+        method: POST
+        description: Create contact
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: organizations
+      path: /organizations
+      operations:
+      - name: get-organizations
+        method: GET
+        description: List organizations
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post-organizations
+        method: POST
+        description: Create organization
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: grapes-finance-rest
+    description: REST adapter for Grapes Finance API.
+    resources:
+    - path: /users
+      name: get-users
+      operations:
+      - method: GET
+        name: get-users
+        description: List users
+        call: grapes-finance.get-users
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /users
+      name: post-users
+      operations:
+      - method: POST
+        name: post-users
+        description: Create user
+        call: grapes-finance.post-users
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /users/{userId}
+      name: get-users-userid
+      operations:
+      - method: GET
+        name: get-users-userid
+        description: Get user
+        call: grapes-finance.get-users-userid
+        with:
+          userId: rest.userId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /kyc
+      name: post-kyc
+      operations:
+      - method: POST
+        name: post-kyc
+        description: Submit KYC application
+        call: grapes-finance.post-kyc
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /wallets
+      name: get-wallets
+      operations:
+      - method: GET
+        name: get-wallets
+        description: List wallets
+        call: grapes-finance.get-wallets
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /wallets
+      name: post-wallets
+      operations:
+      - method: POST
+        name: post-wallets
+        description: Create wallet
+        call: grapes-finance.post-wallets
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /orders
+      name: get-orders
+      operations:
+      - method: GET
+        name: get-orders
+        description: List orders
+        call: grapes-finance.get-orders
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /orders
+      name: post-orders
+      operations:
+      - method: POST
+        name: post-orders
+        description: Create order
+        call: grapes-finance.post-orders
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /contacts
+      name: get-contacts
+      operations:
+      - method: GET
+        name: get-contacts
+        description: List contacts
+        call: grapes-finance.get-contacts
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /contacts
+      name: post-contacts
+      operations:
+      - method: POST
+        name: post-contacts
+        description: Create contact
+        call: grapes-finance.post-contacts
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /organizations
+      name: get-organizations
+      operations:
+      - method: GET
+        name: get-organizations
+        description: List organizations
+        call: grapes-finance.get-organizations
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /organizations
+      name: post-organizations
+      operations:
+      - method: POST
+        name: post-organizations
+        description: Create organization
+        call: grapes-finance.post-organizations
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: grapes-finance-mcp
+    transport: http
+    description: MCP adapter for Grapes Finance API for AI agent use.
+    tools:
+    - name: get-users
+      description: List users
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: grapes-finance.get-users
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: post-users
+      description: Create user
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: grapes-finance.post-users
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-users-userid
+      description: Get user
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: grapes-finance.get-users-userid
+      with:
+        userId: tools.userId
+      inputParameters:
+      - name: userId
+        type: string
+        description: userId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: post-kyc
+      description: Submit KYC application
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: grapes-finance.post-kyc
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-wallets
+      description: List wallets
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: grapes-finance.get-wallets
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: post-wallets
+      description: Create wallet
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: grapes-finance.post-wallets
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-orders
+      description: List orders
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: grapes-finance.get-orders
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: post-orders
+      description: Create order
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: grapes-finance.post-orders
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-contacts
+      description: List contacts
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: grapes-finance.get-contacts
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: post-contacts
+      description: Create contact
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: grapes-finance.post-contacts
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-organizations
+      description: List organizations
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: grapes-finance.get-organizations
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: post-organizations
+      description: Create organization
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: grapes-finance.post-organizations
+      outputParameters:
+      - type: object
+        mapping: $.
+binds:
+- namespace: env
+  keys:
+    GRAPES_FINANCE_TOKEN: GRAPES_FINANCE_TOKEN
