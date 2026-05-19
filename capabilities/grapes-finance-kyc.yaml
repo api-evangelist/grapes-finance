@@ -1,0 +1,82 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Grapes Finance API — KYC
+  description: 'Grapes Finance API — KYC. 1 operations. Lead operation: Submit KYC application. Self-contained Naftiko capability
+    covering one Grapes Finance business surface.'
+  tags:
+  - Grapes Finance
+  - KYC
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GRAPES_FINANCE_API_KEY: GRAPES_FINANCE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: grapes-finance-kyc
+    baseUri: https://api.demo.grapesfinance.com
+    description: Grapes Finance API — KYC business capability. Self-contained, no shared references.
+    resources:
+    - name: kyc
+      path: /kyc
+      operations:
+      - name: post
+        method: POST
+        description: Submit KYC application
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: apikey
+      key: X-API-Key
+      value: '{{env.GRAPES_FINANCE_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: grapes-finance-kyc-rest
+    port: 8080
+    description: REST adapter for Grapes Finance API — KYC. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/kyc
+      name: kyc
+      description: REST surface for kyc.
+      operations:
+      - method: POST
+        name: post
+        description: Submit KYC application
+        call: grapes-finance-kyc.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: grapes-finance-kyc-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Grapes Finance API — KYC. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: submit-kyc-application
+      description: Submit KYC application
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: grapes-finance-kyc.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
