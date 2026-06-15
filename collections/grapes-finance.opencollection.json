@@ -1,0 +1,229 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Grapes Finance API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-Key",
+      "value": "{{X-API-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List users",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.demo.grapesfinance.com/users"
+          },
+          "docs": "Retrieve a list of users associated with the authenticated account."
+        },
+        {
+          "info": {
+            "name": "Create user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.demo.grapesfinance.com/users",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a new user account with Grapes wallet control."
+        },
+        {
+          "info": {
+            "name": "Get user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.demo.grapesfinance.com/users/:userId",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get user"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "KYC",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Submit KYC application",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.demo.grapesfinance.com/kyc",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Submit Know Your Customer or Know Your Business verification."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Wallets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List wallets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.demo.grapesfinance.com/wallets"
+          },
+          "docs": "List wallets"
+        },
+        {
+          "info": {
+            "name": "Create wallet",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.demo.grapesfinance.com/wallets",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a custodial or non-custodial wallet on Ethereum, Algorand, or Stellar."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Orders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.demo.grapesfinance.com/orders"
+          },
+          "docs": "List orders"
+        },
+        {
+          "info": {
+            "name": "Create order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.demo.grapesfinance.com/orders",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a fiat-to-stablecoin onramp, stablecoin-to-fiat offramp, or payout order."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Contacts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List contacts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.demo.grapesfinance.com/contacts"
+          },
+          "docs": "List contacts"
+        },
+        {
+          "info": {
+            "name": "Create contact",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.demo.grapesfinance.com/contacts",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create contact"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Organizations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List organizations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.demo.grapesfinance.com/organizations"
+          },
+          "docs": "List organizations"
+        },
+        {
+          "info": {
+            "name": "Create organization",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.demo.grapesfinance.com/organizations",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create organization"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

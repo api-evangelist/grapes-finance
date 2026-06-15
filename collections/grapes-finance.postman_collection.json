@@ -1,0 +1,1147 @@
+{
+  "item": [
+    {
+      "id": "e5eaf50f-600a-46f9-a6de-cdbe9e4683bc",
+      "name": "Users",
+      "description": {
+        "content": "Account management for users controlling Grapes wallets",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5bcc28d2-4cdc-4d2b-922a-ee040503131e",
+          "name": "List users",
+          "request": {
+            "name": "List users",
+            "description": {
+              "content": "Retrieve a list of users associated with the authenticated account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "users"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ccbd2b32-6742-4251-9adc-595bf39a8ca7",
+              "name": "A list of users",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "users"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"email\": \"a3GGx5TKwyFp@aykwujojqTGPfqBMEHSwh.ptel\",\n    \"firstName\": \"string\",\n    \"lastName\": \"string\",\n    \"status\": \"suspended\",\n    \"createdAt\": \"1981-08-29T02:34:51.093Z\"\n  },\n  {\n    \"id\": \"string\",\n    \"email\": \"gixinBbKQntFE@viNGgWENhzIxkHhnxBFIZ.im\",\n    \"firstName\": \"string\",\n    \"lastName\": \"string\",\n    \"status\": \"suspended\",\n    \"createdAt\": \"1987-05-27T20:16:39.662Z\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bdd5a226-cbdc-4c80-bfad-d9801dafd1ca",
+          "name": "Create user",
+          "request": {
+            "name": "Create user",
+            "description": {
+              "content": "Create a new user account with Grapes wallet control.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "users"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"email\": \"<email>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"status\": \"<string>\",\n  \"createdAt\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "731fd7a5-b59c-479a-9182-abed04c2a13a",
+              "name": "User created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "users"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"email\": \"<email>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"status\": \"<string>\",\n  \"createdAt\": \"<dateTime>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"email\": \"XPlHoprZ@mlikZIfEjbtvUlJYVZi.wyx\",\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"status\": \"active\",\n  \"createdAt\": \"1957-02-19T22:42:42.036Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c835a0f0-961d-43af-b767-6f66c5d02a29",
+          "name": "Get user",
+          "request": {
+            "name": "Get user",
+            "description": {},
+            "url": {
+              "path": [
+                "users",
+                ":userId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "01050670-a100-414f-97ab-a73603a53036",
+              "name": "A user",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "users",
+                    ":userId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "userId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"email\": \"XPlHoprZ@mlikZIfEjbtvUlJYVZi.wyx\",\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"status\": \"active\",\n  \"createdAt\": \"1957-02-19T22:42:42.036Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "865c7e56-e7a9-45aa-af11-05698bacf71a",
+      "name": "KYC",
+      "description": {
+        "content": "Identity verification for individuals and businesses",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8f46b6cd-2687-4429-bf4f-72f0e7210019",
+          "name": "Submit KYC application",
+          "request": {
+            "name": "Submit KYC application",
+            "description": {
+              "content": "Submit Know Your Customer or Know Your Business verification.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "kyc"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"userId\": \"<string>\",\n  \"type\": \"<string>\",\n  \"status\": \"<string>\",\n  \"documents\": [\n    {\n      \"type\": \"<string>\",\n      \"url\": \"<string>\"\n    },\n    {\n      \"type\": \"<string>\",\n      \"url\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "29fba3e4-8336-4468-acea-6f6830b8720e",
+              "name": "KYC application submitted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "kyc"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"userId\": \"<string>\",\n  \"type\": \"<string>\",\n  \"status\": \"<string>\",\n  \"documents\": [\n    {\n      \"type\": \"<string>\",\n      \"url\": \"<string>\"\n    },\n    {\n      \"type\": \"<string>\",\n      \"url\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"userId\": \"string\",\n  \"type\": \"individual\",\n  \"status\": \"rejected\",\n  \"documents\": [\n    {\n      \"type\": \"string\",\n      \"url\": \"string\"\n    },\n    {\n      \"type\": \"string\",\n      \"url\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "c54d2305-848b-470c-bc3e-253798be9520",
+      "name": "Wallets",
+      "description": {
+        "content": "Custodial and non-custodial cryptocurrency wallet operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5eaa55e7-bf91-42c1-802b-4c044bc5edef",
+          "name": "List wallets",
+          "request": {
+            "name": "List wallets",
+            "description": {},
+            "url": {
+              "path": [
+                "wallets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d139fd29-3eae-4ffa-8cbb-b4858c77d30e",
+              "name": "A list of wallets",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "wallets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"userId\": \"string\",\n    \"custody\": \"non-custodial\",\n    \"chain\": \"algorand\",\n    \"address\": \"string\",\n    \"balances\": [\n      {\n        \"asset\": \"QCAD\",\n        \"amount\": \"string\"\n      },\n      {\n        \"asset\": \"USD\",\n        \"amount\": \"string\"\n      }\n    ]\n  },\n  {\n    \"id\": \"string\",\n    \"userId\": \"string\",\n    \"custody\": \"custodial\",\n    \"chain\": \"stellar\",\n    \"address\": \"string\",\n    \"balances\": [\n      {\n        \"asset\": \"CAD\",\n        \"amount\": \"string\"\n      },\n      {\n        \"asset\": \"USDC\",\n        \"amount\": \"string\"\n      }\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f837b877-5174-474c-af28-e6a77216f12c",
+          "name": "Create wallet",
+          "request": {
+            "name": "Create wallet",
+            "description": {
+              "content": "Create a custodial or non-custodial wallet on Ethereum, Algorand, or Stellar.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "wallets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"userId\": \"<string>\",\n  \"custody\": \"<string>\",\n  \"chain\": \"<string>\",\n  \"address\": \"<string>\",\n  \"balances\": [\n    {\n      \"asset\": \"<string>\",\n      \"amount\": \"<string>\"\n    },\n    {\n      \"asset\": \"<string>\",\n      \"amount\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a028df24-7165-4610-a5a5-f2978cd732bb",
+              "name": "Wallet created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "wallets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"userId\": \"<string>\",\n  \"custody\": \"<string>\",\n  \"chain\": \"<string>\",\n  \"address\": \"<string>\",\n  \"balances\": [\n    {\n      \"asset\": \"<string>\",\n      \"amount\": \"<string>\"\n    },\n    {\n      \"asset\": \"<string>\",\n      \"amount\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"userId\": \"string\",\n  \"custody\": \"custodial\",\n  \"chain\": \"stellar\",\n  \"address\": \"string\",\n  \"balances\": [\n    {\n      \"asset\": \"CAD\",\n      \"amount\": \"string\"\n    },\n    {\n      \"asset\": \"CAD\",\n      \"amount\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "65c113dc-59dc-4d60-956f-bab8d2b07cef",
+      "name": "Orders",
+      "description": {
+        "content": "Fiat-to-stablecoin, stablecoin-to-fiat, and payout orders",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1d9205ab-60d4-43d3-ae3e-eac3628766da",
+          "name": "List orders",
+          "request": {
+            "name": "List orders",
+            "description": {},
+            "url": {
+              "path": [
+                "orders"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1bdba174-22e9-4026-b46b-39bf74c22d2e",
+              "name": "A list of orders",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "orders"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"type\": \"offramp\",\n    \"sourceAsset\": \"USDC\",\n    \"destinationAsset\": \"USD\",\n    \"amount\": \"string\",\n    \"status\": \"processing\",\n    \"createdAt\": \"2009-09-07T06:52:35.261Z\"\n  },\n  {\n    \"id\": \"string\",\n    \"type\": \"offramp\",\n    \"sourceAsset\": \"QCAD\",\n    \"destinationAsset\": \"USDC\",\n    \"amount\": \"string\",\n    \"status\": \"pending\",\n    \"createdAt\": \"1948-02-05T16:20:56.762Z\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "62da3e98-7930-48d9-8f4a-bf882e055866",
+          "name": "Create order",
+          "request": {
+            "name": "Create order",
+            "description": {
+              "content": "Create a fiat-to-stablecoin onramp, stablecoin-to-fiat offramp, or payout order.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "orders"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"type\": \"<string>\",\n  \"sourceAsset\": \"<string>\",\n  \"destinationAsset\": \"<string>\",\n  \"amount\": \"<string>\",\n  \"status\": \"<string>\",\n  \"createdAt\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ed272878-a00d-41a4-ba93-b9872028dc5f",
+              "name": "Order created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "orders"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"type\": \"<string>\",\n  \"sourceAsset\": \"<string>\",\n  \"destinationAsset\": \"<string>\",\n  \"amount\": \"<string>\",\n  \"status\": \"<string>\",\n  \"createdAt\": \"<dateTime>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"type\": \"offramp\",\n  \"sourceAsset\": \"USDC\",\n  \"destinationAsset\": \"CAD\",\n  \"amount\": \"string\",\n  \"status\": \"processing\",\n  \"createdAt\": \"2006-03-15T16:31:47.979Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "9547c8c5-aad7-4f20-8400-570bb19234c2",
+      "name": "Contacts",
+      "description": {
+        "content": "Beneficiary management for third-party payouts",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "816f1663-4829-48ec-9e93-058ba629b291",
+          "name": "List contacts",
+          "request": {
+            "name": "List contacts",
+            "description": {},
+            "url": {
+              "path": [
+                "contacts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c3b57571-5867-45e3-8783-56fa45da9639",
+              "name": "A list of beneficiary contacts",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "contacts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"email\": \"dBT@bhhKaMduuOsXGclFuJLRZ.uigc\",\n    \"walletAddress\": \"string\",\n    \"bankAccount\": {\n      \"institution\": \"string\",\n      \"accountNumber\": \"string\",\n      \"transit\": \"string\"\n    }\n  },\n  {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"email\": \"kUTjRqnM@MEyjxjcMoYYCZDSLbDoTzGn.xok\",\n    \"walletAddress\": \"string\",\n    \"bankAccount\": {\n      \"institution\": \"string\",\n      \"accountNumber\": \"string\",\n      \"transit\": \"string\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "933a071b-bc6e-45ed-b170-4b44b3ae209d",
+          "name": "Create contact",
+          "request": {
+            "name": "Create contact",
+            "description": {},
+            "url": {
+              "path": [
+                "contacts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"email\": \"<email>\",\n  \"walletAddress\": \"<string>\",\n  \"bankAccount\": {\n    \"institution\": \"<string>\",\n    \"accountNumber\": \"<string>\",\n    \"transit\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b384ece5-4ade-4b21-95e7-734e46c9f6c8",
+              "name": "Contact created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "contacts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"email\": \"<email>\",\n  \"walletAddress\": \"<string>\",\n  \"bankAccount\": {\n    \"institution\": \"<string>\",\n    \"accountNumber\": \"<string>\",\n    \"transit\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "e5829aa2-1eb5-4b13-95dd-3900026130a2",
+      "name": "Organizations",
+      "description": {
+        "content": "Vineyard Manager API for embedded client management",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a201d217-1673-49a6-af5f-e2ade3ee41fc",
+          "name": "List organizations",
+          "request": {
+            "name": "List organizations",
+            "description": {},
+            "url": {
+              "path": [
+                "organizations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "720c2c3f-0950-41f2-ad83-1ba89e3a81b8",
+              "name": "A list of organizations",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"members\": [\n      \"string\",\n      \"string\"\n    ],\n    \"createdAt\": \"1947-04-18T15:35:15.759Z\"\n  },\n  {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"members\": [\n      \"string\",\n      \"string\"\n    ],\n    \"createdAt\": \"2005-01-18T04:46:56.996Z\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "54f55d5c-605b-4854-9c3a-a57889c7a041",
+          "name": "Create organization",
+          "request": {
+            "name": "Create organization",
+            "description": {},
+            "url": {
+              "path": [
+                "organizations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"members\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"createdAt\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d7dae46a-7f68-443a-b29b-49049e57f41a",
+              "name": "Organization created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"members\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"createdAt\": \"<dateTime>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.demo.grapesfinance.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-Key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "7ac5d0b0-708c-49cf-853c-19a8d85a82b3",
+    "name": "Grapes Finance API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Grapes is an embedded stablecoin onramp and offramp solution that enables businesses and developers to integrate fiat-to-stablecoin and stablecoin-to-fiat transactions. Supports buying and selling stablecoins such as USDC and QCAD with CAD and USD across Ethereum, Algorand, and Stellar networks.\n\nContact Support:\n Name: Grapes Finance Support",
+      "type": "text/plain"
+    }
+  }
+}
