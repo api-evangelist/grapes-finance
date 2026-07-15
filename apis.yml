@@ -58,6 +58,8 @@ apis:
       - type: OpenAPI
         url: openapi/grapes-finance-openapi.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/grapes-finance-agentic-access.yml
   - type: DomainSecurity
     url: security/grapes-finance-domain-security.yml
   - type: Authentication
