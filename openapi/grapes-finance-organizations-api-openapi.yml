@@ -1,0 +1,68 @@
+openapi: 3.1.0
+info:
+  title: Grapes Finance Contacts Organizations API
+  description: Grapes is an embedded stablecoin onramp and offramp solution that enables businesses and developers to integrate fiat-to-stablecoin and stablecoin-to-fiat transactions. Supports buying and selling stablecoins such as USDC and QCAD with CAD and USD across Ethereum, Algorand, and Stellar networks.
+  version: 1.0.0
+  contact:
+    name: Grapes Finance Support
+    url: https://docs.grapesfinance.com/api-user-guide/
+servers:
+- url: https://api.demo.grapesfinance.com
+  description: Grapes Demo / Sandbox API
+security:
+- ApiKeyAuth: []
+tags:
+- name: Organizations
+  description: Vineyard Manager API for embedded client management
+paths:
+  /organizations:
+    get:
+      tags:
+      - Organizations
+      summary: List organizations
+      responses:
+        '200':
+          description: A list of organizations
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Organization'
+    post:
+      tags:
+      - Organizations
+      summary: Create organization
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Organization'
+      responses:
+        '201':
+          description: Organization created
+components:
+  schemas:
+    Organization:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        members:
+          type: array
+          items:
+            type: string
+        createdAt:
+          type: string
+          format: date-time
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+externalDocs:
+  description: Grapes Finance API User Guide
+  url: https://docs.grapesfinance.com/api-user-guide/

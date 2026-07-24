@@ -1,0 +1,73 @@
+openapi: 3.1.0
+info:
+  title: Grapes Finance Contacts KYC API
+  description: Grapes is an embedded stablecoin onramp and offramp solution that enables businesses and developers to integrate fiat-to-stablecoin and stablecoin-to-fiat transactions. Supports buying and selling stablecoins such as USDC and QCAD with CAD and USD across Ethereum, Algorand, and Stellar networks.
+  version: 1.0.0
+  contact:
+    name: Grapes Finance Support
+    url: https://docs.grapesfinance.com/api-user-guide/
+servers:
+- url: https://api.demo.grapesfinance.com
+  description: Grapes Demo / Sandbox API
+security:
+- ApiKeyAuth: []
+tags:
+- name: KYC
+  description: Identity verification for individuals and businesses
+paths:
+  /kyc:
+    post:
+      tags:
+      - KYC
+      summary: Submit KYC application
+      description: Submit Know Your Customer or Know Your Business verification.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/KycApplication'
+      responses:
+        '201':
+          description: KYC application submitted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/KycApplication'
+components:
+  schemas:
+    KycApplication:
+      type: object
+      properties:
+        id:
+          type: string
+        userId:
+          type: string
+        type:
+          type: string
+          enum:
+          - individual
+          - business
+        status:
+          type: string
+          enum:
+          - pending
+          - approved
+          - rejected
+        documents:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+              url:
+                type: string
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+externalDocs:
+  description: Grapes Finance API User Guide
+  url: https://docs.grapesfinance.com/api-user-guide/
