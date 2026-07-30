@@ -6,9 +6,22 @@ description: >-
   transactions into their applications, services, and platforms, including buying and selling stablecoins such as QCAD
   and USDC with CAD and USD across Ethereum, Algorand, and Stellar networks.
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/grapes-finance.png
 tags:
   - Stablecoin
   - Onramp
@@ -22,41 +35,78 @@ modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/grapes-finance/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: grapes-finance:grapes-finance-core-api
-    name: Grapes Finance Core API (Master Vintner)
-    description: >-
-      The Core API enables businesses to manage their own Grapes or non-custodial wallets across Ethereum, Algorand, and
-      Stellar blockchains. Supports stablecoin swaps (USDC/QCAD), fiat onramps from Canadian banks, and third-party
-      payouts.
-    humanURL: https://docs.grapesfinance.com/api-user-guide/
-    baseURL: https://api.demo.grapesfinance.com
-    tags:
-      - Stablecoin
-      - Wallet
-      - Onramp
-      - Offramp
-      - Payouts
-    properties:
-      - type: Documentation
-        url: https://docs.grapesfinance.com/api-user-guide/
-      - type: OpenAPI
-        url: openapi/grapes-finance-openapi.yml
-  - aid: grapes-finance:grapes-finance-organizations-api
-    name: Grapes Finance Organizations API (Vineyard Manager)
-    description: >-
-      The Organizations API enables businesses to embed Grapes functionality without requiring direct client
-      authentication, allowing management of client wallets and submission of transactions on their behalf.
-    humanURL: https://docs.grapesfinance.com/api-user-guide/
-    baseURL: https://api.demo.grapesfinance.com
-    tags:
-      - Embedded Finance
-      - Organizations
-      - Wallet Management
-    properties:
-      - type: Documentation
-        url: https://docs.grapesfinance.com/api-user-guide/
-      - type: OpenAPI
-        url: openapi/grapes-finance-openapi.yml
+- aid: grapes-finance:grapes-finance-contacts-api
+  name: Grapes Finance Contacts API
+  description: Beneficiary management for third-party payouts
+  humanURL: https://docs.grapesfinance.com/api-user-guide/
+  baseURL: https://api.demo.grapesfinance.com
+  tags:
+  - Contacts
+  properties:
+  - type: OpenAPI
+    url: openapi/grapes-finance-contacts-api-openapi.yml
+  - type: Documentation
+    url: https://docs.grapesfinance.com/api-user-guide/
+- aid: grapes-finance:grapes-finance-kyc-api
+  name: Grapes Finance KYC API
+  description: Identity verification for individuals and businesses
+  humanURL: https://docs.grapesfinance.com/api-user-guide/
+  baseURL: https://api.demo.grapesfinance.com
+  tags:
+  - KYC
+  properties:
+  - type: OpenAPI
+    url: openapi/grapes-finance-kyc-api-openapi.yml
+  - type: Documentation
+    url: https://docs.grapesfinance.com/api-user-guide/
+- aid: grapes-finance:grapes-finance-orders-api
+  name: Grapes Finance Orders API
+  description: Fiat-to-stablecoin, stablecoin-to-fiat, and payout orders
+  humanURL: https://docs.grapesfinance.com/api-user-guide/
+  baseURL: https://api.demo.grapesfinance.com
+  tags:
+  - Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/grapes-finance-orders-api-openapi.yml
+  - type: Documentation
+    url: https://docs.grapesfinance.com/api-user-guide/
+- aid: grapes-finance:grapes-finance-organizations-api
+  name: Grapes Finance Organizations API
+  description: Vineyard Manager API for embedded client management
+  humanURL: https://docs.grapesfinance.com/api-user-guide/
+  baseURL: https://api.demo.grapesfinance.com
+  tags:
+  - Organizations
+  properties:
+  - type: OpenAPI
+    url: openapi/grapes-finance-organizations-api-openapi.yml
+  - type: Documentation
+    url: https://docs.grapesfinance.com/api-user-guide/
+- aid: grapes-finance:grapes-finance-users-api
+  name: Grapes Finance Users API
+  description: Account management for users controlling Grapes wallets
+  humanURL: https://docs.grapesfinance.com/api-user-guide/
+  baseURL: https://api.demo.grapesfinance.com
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/grapes-finance-users-api-openapi.yml
+  - type: Documentation
+    url: https://docs.grapesfinance.com/api-user-guide/
+- aid: grapes-finance:grapes-finance-wallets-api
+  name: Grapes Finance Wallets API
+  description: Custodial and non-custodial cryptocurrency wallet operations
+  humanURL: https://docs.grapesfinance.com/api-user-guide/
+  baseURL: https://api.demo.grapesfinance.com
+  tags:
+  - Wallets
+  properties:
+  - type: OpenAPI
+    url: openapi/grapes-finance-wallets-api-openapi.yml
+  - type: Documentation
+    url: https://docs.grapesfinance.com/api-user-guide/
 common:
   - type: AgenticAccess
     url: agentic-access/grapes-finance-agentic-access.yml
