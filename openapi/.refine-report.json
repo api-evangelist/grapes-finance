@@ -1,0 +1,24 @@
+{
+  "provider": "grapes-finance",
+  "sources": [
+    "grapes-finance-contacts-api-openapi.yml",
+    "grapes-finance-kyc-api-openapi.yml",
+    "grapes-finance-orders-api-openapi.yml",
+    "grapes-finance-organizations-api-openapi.yml",
+    "grapes-finance-users-api-openapi.yml",
+    "grapes-finance-wallets-api-openapi.yml"
+  ],
+  "outputs": [
+    "grapes-finance-contacts-api-openapi.yml",
+    "grapes-finance-kyc-api-openapi.yml",
+    "grapes-finance-orders-api-openapi.yml",
+    "grapes-finance-organizations-api-openapi.yml",
+    "grapes-finance-users-api-openapi.yml",
+    "grapes-finance-wallets-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
