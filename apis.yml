@@ -117,7 +117,7 @@ common:
   - type: Documentation
     url: https://docs.grapesfinance.com/api-user-guide/
   - type: OpenAPI
-    url: openapi/grapes-finance-openapi.yml
+    url: openapi/_original/grapes-finance-openapi.yml
   - type: JSONSchema
     url: json-schema/grapes-finance-order-schema.json
   - type: JSONLDContext
