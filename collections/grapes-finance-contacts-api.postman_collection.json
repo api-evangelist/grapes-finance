@@ -1,0 +1,212 @@
+{
+  "item": [
+    {
+      "id": "7033b50a-0a58-40a3-b096-066d3568c086",
+      "name": "Contacts",
+      "description": {
+        "content": "Beneficiary management for third-party payouts",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c8c65d2b-0bdb-49ab-b0b2-2de2d17c1306",
+          "name": "List contacts",
+          "request": {
+            "name": "List contacts",
+            "description": {},
+            "url": {
+              "path": [
+                "contacts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f134ebd8-0e8f-4199-a1aa-4e22dc3f151d",
+              "name": "A list of beneficiary contacts",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "contacts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"email\": \"3lWcCVlG9ZNw@LxCF.hkwr\",\n    \"walletAddress\": \"string\",\n    \"bankAccount\": {\n      \"institution\": \"string\",\n      \"accountNumber\": \"string\",\n      \"transit\": \"string\"\n    }\n  },\n  {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"email\": \"nRxipQxexI@QNNoHqANkOFBTQKCrhLyLFVFyTcY.hb\",\n    \"walletAddress\": \"string\",\n    \"bankAccount\": {\n      \"institution\": \"string\",\n      \"accountNumber\": \"string\",\n      \"transit\": \"string\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "dcd1d89c-1b13-459f-8dca-d0dfd6524329",
+          "name": "Create contact",
+          "request": {
+            "name": "Create contact",
+            "description": {},
+            "url": {
+              "path": [
+                "contacts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"email\": \"<email>\",\n  \"walletAddress\": \"<string>\",\n  \"bankAccount\": {\n    \"institution\": \"<string>\",\n    \"accountNumber\": \"<string>\",\n    \"transit\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "99585bd7-8852-4e8e-9632-df926fd36273",
+              "name": "Contact created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "contacts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"email\": \"<email>\",\n  \"walletAddress\": \"<string>\",\n  \"bankAccount\": {\n    \"institution\": \"<string>\",\n    \"accountNumber\": \"<string>\",\n    \"transit\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.demo.grapesfinance.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-Key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "706b6ace-86c1-425c-acb7-2a3a1e01edc6",
+    "name": "Grapes Finance Contacts API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Grapes is an embedded stablecoin onramp and offramp solution that enables businesses and developers to integrate fiat-to-stablecoin and stablecoin-to-fiat transactions. Supports buying and selling stablecoins such as USDC and QCAD with CAD and USD across Ethereum, Algorand, and Stellar networks.\n\nContact Support:\n Name: Grapes Finance Support",
+      "type": "text/plain"
+    }
+  }
+}

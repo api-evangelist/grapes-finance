@@ -1,0 +1,223 @@
+{
+  "item": [
+    {
+      "id": "5d83e176-34e4-444c-88b9-a302b091ce5d",
+      "name": "Wallets",
+      "description": {
+        "content": "Custodial and non-custodial cryptocurrency wallet operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2149cea9-7a58-4e9c-9be5-e5042ae3d7f3",
+          "name": "List wallets",
+          "request": {
+            "name": "List wallets",
+            "description": {},
+            "url": {
+              "path": [
+                "wallets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f0f4ab80-047f-4781-8e60-ff0bb5a41a5c",
+              "name": "A list of wallets",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "wallets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"userId\": \"string\",\n    \"custody\": \"custodial\",\n    \"chain\": \"ethereum\",\n    \"address\": \"string\",\n    \"balances\": [\n      {\n        \"asset\": \"USD\",\n        \"amount\": \"string\"\n      },\n      {\n        \"asset\": \"CAD\",\n        \"amount\": \"string\"\n      }\n    ]\n  },\n  {\n    \"id\": \"string\",\n    \"userId\": \"string\",\n    \"custody\": \"custodial\",\n    \"chain\": \"ethereum\",\n    \"address\": \"string\",\n    \"balances\": [\n      {\n        \"asset\": \"USD\",\n        \"amount\": \"string\"\n      },\n      {\n        \"asset\": \"USD\",\n        \"amount\": \"string\"\n      }\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e37a4cfa-3ebc-4bb7-8ec4-37f39e535e3f",
+          "name": "Create wallet",
+          "request": {
+            "name": "Create wallet",
+            "description": {
+              "content": "Create a custodial or non-custodial wallet on Ethereum, Algorand, or Stellar.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "wallets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"userId\": \"<string>\",\n  \"custody\": \"<string>\",\n  \"chain\": \"<string>\",\n  \"address\": \"<string>\",\n  \"balances\": [\n    {\n      \"asset\": \"<string>\",\n      \"amount\": \"<string>\"\n    },\n    {\n      \"asset\": \"<string>\",\n      \"amount\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a3f86d27-5f1d-4f95-a573-0173c21e72e0",
+              "name": "Wallet created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "wallets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"userId\": \"<string>\",\n  \"custody\": \"<string>\",\n  \"chain\": \"<string>\",\n  \"address\": \"<string>\",\n  \"balances\": [\n    {\n      \"asset\": \"<string>\",\n      \"amount\": \"<string>\"\n    },\n    {\n      \"asset\": \"<string>\",\n      \"amount\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"userId\": \"string\",\n  \"custody\": \"custodial\",\n  \"chain\": \"algorand\",\n  \"address\": \"string\",\n  \"balances\": [\n    {\n      \"asset\": \"USDC\",\n      \"amount\": \"string\"\n    },\n    {\n      \"asset\": \"QCAD\",\n      \"amount\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.demo.grapesfinance.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-Key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "9cbe88e8-95db-4cfe-b683-a46bad2b3473",
+    "name": "Grapes Finance Contacts Wallets API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Grapes is an embedded stablecoin onramp and offramp solution that enables businesses and developers to integrate fiat-to-stablecoin and stablecoin-to-fiat transactions. Supports buying and selling stablecoins such as USDC and QCAD with CAD and USD across Ethereum, Algorand, and Stellar networks.\n\nContact Support:\n Name: Grapes Finance Support",
+      "type": "text/plain"
+    }
+  }
+}

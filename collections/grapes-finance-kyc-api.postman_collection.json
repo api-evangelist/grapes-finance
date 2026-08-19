@@ -1,0 +1,148 @@
+{
+  "item": [
+    {
+      "id": "43d0cd04-f233-40a6-9f66-0e50a72d5425",
+      "name": "KYC",
+      "description": {
+        "content": "Identity verification for individuals and businesses",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "677c50f4-8648-432b-9aa1-b80b5738d3ef",
+          "name": "Submit KYC application",
+          "request": {
+            "name": "Submit KYC application",
+            "description": {
+              "content": "Submit Know Your Customer or Know Your Business verification.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "kyc"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"userId\": \"<string>\",\n  \"type\": \"<string>\",\n  \"status\": \"<string>\",\n  \"documents\": [\n    {\n      \"type\": \"<string>\",\n      \"url\": \"<string>\"\n    },\n    {\n      \"type\": \"<string>\",\n      \"url\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "8a0ec08b-2a6c-4e6e-85ab-9bde1ce2eb00",
+              "name": "KYC application submitted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "kyc"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"userId\": \"<string>\",\n  \"type\": \"<string>\",\n  \"status\": \"<string>\",\n  \"documents\": [\n    {\n      \"type\": \"<string>\",\n      \"url\": \"<string>\"\n    },\n    {\n      \"type\": \"<string>\",\n      \"url\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"userId\": \"string\",\n  \"type\": \"individual\",\n  \"status\": \"rejected\",\n  \"documents\": [\n    {\n      \"type\": \"string\",\n      \"url\": \"string\"\n    },\n    {\n      \"type\": \"string\",\n      \"url\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.demo.grapesfinance.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-Key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "eae4ebba-d7a4-4ee7-923a-905da930c407",
+    "name": "Grapes Finance Contacts KYC API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Grapes is an embedded stablecoin onramp and offramp solution that enables businesses and developers to integrate fiat-to-stablecoin and stablecoin-to-fiat transactions. Supports buying and selling stablecoins such as USDC and QCAD with CAD and USD across Ethereum, Algorand, and Stellar networks.\n\nContact Support:\n Name: Grapes Finance Support",
+      "type": "text/plain"
+    }
+  }
+}

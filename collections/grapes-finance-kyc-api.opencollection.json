@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Grapes Finance Contacts KYC API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-Key",
+      "value": "{{X-API-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "KYC",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Submit KYC application",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.demo.grapesfinance.com/kyc",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Submit Know Your Customer or Know Your Business verification."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
