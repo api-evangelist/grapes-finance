@@ -34,9 +34,9 @@ position: Consumer
 access: 3rd-Party
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/grapes-finance.png
 tags:
-  - Stablecoins
-  - On-Ramp
-  - Off-Ramp
+  - Stablecoin
+  - Onramp
+  - Offramp
   - Fiat
   - Payments
   - Cryptocurrency
