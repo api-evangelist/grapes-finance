@@ -1,12 +1,7 @@
 {
   "provider": "grapes-finance",
   "sources": [
-    "grapes-finance-contacts-api-openapi.yml",
-    "grapes-finance-kyc-api-openapi.yml",
-    "grapes-finance-orders-api-openapi.yml",
-    "grapes-finance-organizations-api-openapi.yml",
-    "grapes-finance-users-api-openapi.yml",
-    "grapes-finance-wallets-api-openapi.yml"
+    "_original/grapes-finance-openapi.yml"
   ],
   "outputs": [
     "grapes-finance-contacts-api-openapi.yml",
@@ -19,6 +14,17 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "grapes-finance-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "grapes-finance-contacts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "grapes-finance-kyc-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "grapes-finance-orders-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "grapes-finance-organizations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "grapes-finance-users-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "grapes-finance-wallets-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Grapes Finance Contacts Wallets API
+  title: Grapes Finance Wallets API
   description: Grapes is an embedded stablecoin onramp and offramp solution that enables businesses and developers to integrate fiat-to-stablecoin and stablecoin-to-fiat transactions. Supports buying and selling stablecoins such as USDC and QCAD with CAD and USD across Ethereum, Algorand, and Stellar networks.
   version: 1.0.0
   contact:
@@ -29,6 +29,8 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Wallet'
+      operationId: getWallets
+      x-operation-id-source: derived
     post:
       tags:
       - Wallets
@@ -47,6 +49,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Wallet'
+      operationId: postWallets
+      x-operation-id-source: derived
 components:
   schemas:
     Wallet:
