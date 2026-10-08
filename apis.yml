@@ -138,6 +138,12 @@ apis:
   - type: Documentation
     url: https://docs.grapesfinance.com/api-user-guide/
 common:
+- type: Plans
+  url: plans/grapes-finance-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/grapes-finance-rate-limits.yml
+- type: FinOps
+  url: finops/grapes-finance-finops.yml
 - type: Website
   url: https://grapesfinance.com
 - type: AgenticAccess
