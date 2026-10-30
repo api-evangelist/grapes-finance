@@ -1,4 +1,4 @@
-# Grapes Finance (grapes-finance)
+# Grapes Finance
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,82 +66,142 @@
 
 Grapes is an all-in-one embedded stablecoin onramp and offramp solution that simplifies and streamlines financial transactions. The API enables businesses and developers to integrate fiat-to-stablecoin and stablecoin-to-fiat transactions into their applications, services, and platforms, including buying and selling stablecoins such as QCAD and USDC with CAD and USD across Ethereum, Algorand, and Stellar networks.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/grapes-finance/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/grapes-finance/refs/heads/main/apis.yml)
+**Areas:** Stablecoins · On-Ramp · Off-Ramp · Fiat · Payments · Cryptocurrency · Embedded Finance
 
-## Scope
+## Grapes Finance on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Grapes Finance is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/grapes-finance/](https://apis.io/providers/grapes-finance/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (6)
 
-- Stablecoin
-- Onramp
-- Offramp
-- Fiat
-- Payments
-- Cryptocurrency
-- Embedded Finance
+- [Grapes Finance Contacts API](https://apis.io/apis/grapes-finance/grapes-finance-contacts-api/) — Beneficiary management for third-party payouts
+- [Grapes Finance KYC API](https://apis.io/apis/grapes-finance/grapes-finance-kyc-api/) — Identity verification for individuals and businesses
+- [Grapes Finance Orders API](https://apis.io/apis/grapes-finance/grapes-finance-orders-api/) — Fiat-to-stablecoin, stablecoin-to-fiat, and payout orders
+- [Grapes Finance Organizations API](https://apis.io/apis/grapes-finance/grapes-finance-organizations-api/) — Vineyard Manager API for embedded client management
+- [Grapes Finance Users API](https://apis.io/apis/grapes-finance/grapes-finance-users-api/) — Account management for users controlling Grapes wallets
+- [Grapes Finance Wallets API](https://apis.io/apis/grapes-finance/grapes-finance-wallets-api/) — Custodial and non-custodial cryptocurrency wallet operations
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-02-24
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Grapes Finance Core API (Master Vintner)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Core API enables businesses to manage their own Grapes or non-custodial wallets across Ethereum, Algorand, and Stellar blockchains. Supports stablecoin swaps (USDC/QCAD), fiat onramps from Canadian banks, and third-party payouts.
+- [Grapes Finance Agentic Access](https://apis.io/agentic-access/grapes-finance/grapes-finance-agentic-access/)
 
-- **Human URL:** [https://docs.grapesfinance.com/api-user-guide/](https://docs.grapesfinance.com/api-user-guide/)
-- **Base URL:** `https://api.demo.grapesfinance.com`
+#### JSON Schema (1)
 
-#### Tags
+The data models the API reads and writes.
 
-- Stablecoin
-- Wallet
-- Onramp
-- Offramp
-- Payouts
+- [Grapes Finance Order](https://apis.io/schemas/grapes-finance/grapes-finance-order/)
 
-#### Properties
+#### JSON-LD (1)
 
+Linked-data contexts for the provider's vocabulary.
+
+- [Grapes Finance Context](https://apis.io/jsonld/grapes-finance/grapes-finance-context/)
+
+#### Collections (7)
+
+Postman and Open Collection request collections.
+
+- [Grapes Finance API](https://apis.io/collections/grapes-finance/open-grapes-finance/)
+- [Grapes Finance Contacts API](https://apis.io/collections/grapes-finance/open-grapes-finance-contacts-api/)
+- [Grapes Finance Contacts KYC API](https://apis.io/collections/grapes-finance/open-grapes-finance-kyc-api/)
+- [Grapes Finance Contacts Orders API](https://apis.io/collections/grapes-finance/open-grapes-finance-orders-api/)
+- [Grapes Finance Contacts Organizations API](https://apis.io/collections/grapes-finance/open-grapes-finance-organizations-api/)
+- [Grapes Finance Contacts Users API](https://apis.io/collections/grapes-finance/open-grapes-finance-users-api/)
+- [Grapes Finance Contacts Wallets API](https://apis.io/collections/grapes-finance/open-grapes-finance-wallets-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Grapes Finance — jsonschema rules](https://apis.io/rules/grapes-finance/grapes-finance-jsonschema-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Grapes Finance Authentication](https://apis.io/security/grapes-finance/grapes-finance-authentication/)
+- [Grapes Finance Domain Security](https://apis.io/security/grapes-finance/grapes-finance-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Grapes Finance Plans Pricing](https://apis.io/plans/grapes-finance/grapes-finance-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Grapes Finance Rate Limits](https://apis.io/rate-limits/grapes-finance/grapes-finance-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Grapes Finance Finops](https://apis.io/finops/grapes-finance/grapes-finance-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://grapesfinance.com)
 - [Documentation](https://docs.grapesfinance.com/api-user-guide/)
-- [OpenAPI](openapi/grapes-finance-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/grapes-finance.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/grapes-finance.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
-### Grapes Finance Organizations API (Vineyard Manager)
+## API Evangelist rating
 
-The Organizations API enables businesses to embed Grapes functionality without requiring direct client authentication, allowing management of client wallets and submission of transactions on their behalf.
+**Kin Score 25.4** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-- **Human URL:** [https://docs.grapesfinance.com/api-user-guide/](https://docs.grapesfinance.com/api-user-guide/)
-- **Base URL:** `https://api.demo.grapesfinance.com`
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 48.3 |
+| Contract governance | 9.8 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 7.9 |
 
-#### Tags
+**Agent readiness 17.9** — agent-aware
 
-- Embedded Finance
-- Organizations
-- Wallet Management
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-#### Properties
+**Regulatory alignment 15.2** — Payments
 
-- [Documentation](https://docs.grapesfinance.com/api-user-guide/)
-- [OpenAPI](openapi/grapes-finance-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/grapes-finance.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/grapes-finance.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/grapes-finance/](https://apis.io/providers/grapes-finance/).
 
-## Common Properties
+## How this profile is made
 
-- [Documentation](https://docs.grapesfinance.com/api-user-guide/)
-- [OpenAPI](openapi/grapes-finance-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [JSON Schema](json-schema/grapes-finance-order-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [J S O N L D Context](json-ld/grapes-finance-context.jsonld)
-- [Rules](grapes-finance-rules.yml)
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-## Maintainers
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Grapes Finance: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/grapes-finance/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
